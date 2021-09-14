@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="javascript/dice_roller.js"></script>
+    </head>
+    <body onload="loadDice('show_1')">
+        <h1>Scion D-Ten Dice Roller</h1>
+        <div>
+            <p>Skill Dice</p>
+            <p>
+                <select id="skills" onchange="loadDice('show_1')">
+                    <option value="0">Zero:</option>
+                    <option value="1">One: &#x25cf </option>
+                    <option value="2">Two: &#x25cf &#x25cf</option>
+                    <option value="3">Three: &#x25cf &#x25cf &#x25cf</option>
+                    <option value="4">Four: &#x25cf &#x25cf &#x25cf &#x25cf</option>
+                    <option value="5">Five: &#x25cf &#x25cf &#x25cf &#x25cf &#x25cf</option>
+                </select>
+            </p>
+
+            <p>Attribute Dice</p>
+            <p>
+                <select id="attributes" onchange="loadDice('show_1')">
+                    <option value="1">One: &#x25cf </option>
+                    <option value="2">Two: &#x25cf &#x25cf</option>
+                    <option value="3">Three: &#x25cf &#x25cf &#x25cf</option>
+                    <option value="4">Four: &#x25cf &#x25cf &#x25cf &#x25cf</option>
+                    <option value="5">Five: &#x25cf &#x25cf &#x25cf &#x25cf &#x25cf</option>
+                </select>
+            </p>
+
+            <p>Specialty Dice</p>
+            <p>
+                <select id="specialty" onchange="loadDice('show_1')">
+                    <option value="0">Zero:</option>
+                    <option value="3">Three: &#x25cf &#x25cf &#x25cf</option>
+                </select>
+            </p>
+            
+        </div>
+
+        <div id="diceHolder" >
+            <svg id='show_1' hight="100" width="800">
+                <circle cx="30" cy="50" r="20" stroke="gray" stroke-width="3" fill="gray" />
+                <circle cx="80" cy="50" r="20" stroke="gray" stroke-width="3" fill="gray" />
+                <circle cx="130" cy="50" r="20" stroke="gray" stroke-width="3" fill="gray" />
+                <circle cx="180" cy="50" r="20" stroke="gray" stroke-width="3" fill="gray" />
+                <circle cx="230" cy="50" r="20" stroke="gray" stroke-width="3" fill="gray" />
+                <circle cx="280" cy="50" r="20" stroke="gray" stroke-width="3" fill="gray" />
+                <circle cx="330" cy="50" r="20" stroke="gray" stroke-width="3" fill="gray" />
+                <circle cx="380" cy="50" r="20" stroke="gray" stroke-width="3" fill="gray" />
+                <circle cx="430" cy="50" r="20" stroke="gray" stroke-width="3" fill="gray" />
+                <circle cx="480" cy="50" r="20" stroke="gray" stroke-width="3" fill="gray" />
+                <circle cx="530" cy="50" r="20" stroke="gray" stroke-width="3" fill="gray" />
+                <circle cx="580" cy="50" r="20" stroke="gray" stroke-width="3" fill="gray" />
+                <circle cx="630" cy="50" r="20" stroke="gray" stroke-width="3" fill="gray" />
+            </svg>
+        </div>
+
+        <p>
+            <button onclick="rollDice()">Roll Dice</button>
+        </p>
+
+        <div>
+            <svg id="show_2">
+
+            </svg>
+        </div>
+    </body>
+</html>
